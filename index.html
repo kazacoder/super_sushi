@@ -9,15 +9,17 @@
 <section class="main">
     <div class="container">
         <header class="header">
-            <div class="logo"><img src="images/logo.png" alt="Логотип"></div>
-            <nav class="menu">
-                <ul>
-                    <li><a href="#">Суши</a></li>
-                    <li><a href="#">Ролы</a></li>
-                    <li><a href="#">Доставка и оплата</a></li>
-                    <li><a href="#">Контакты</a></li>
-                </ul>
-            </nav>
+            <div class="header-container">
+                <div class="logo"><img src="images/logo.png" alt="Логотип"></div>
+                <nav class="menu">
+                    <ul>
+                        <li><a href="#">Суши</a></li>
+                        <li><a href="#">Ролы</a></li>
+                        <li><a href="#">Доставка и оплата</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
         <div class="sushi">
             <div class="sushi-info">
@@ -161,7 +163,8 @@
             <div class="about-info">
                 <h2 class="about-info-title">Для вас готовит наш лучший сушист Иван</h2>
                 <div class="about-info-text">
-                    Роллы и суши, которые вы у нас заказываете, делаются профессиональным сушистом с <span class="no-break">5-летним</span> стажем
+                    Роллы и суши, которые вы у нас заказываете, делаются профессиональным сушистом с <span
+                        class="no-break">5-летним</span> стажем
                     Иваном Лазерко, который постоянно подтверждает и улучшает свою квалификацию, совершенствует
                     рецептуру и ассортимент нашего суши-бара, прелагая вам новые и интересные сочетания вкусов.
                 </div>
@@ -169,15 +172,15 @@
                     Читайте подробнее о наших суши и роллах
                 </h3>
                 <div class="about-info-more-links">
-                    <div class="about-info-more-link">
-                        <a href="#"><img src="images/onigiri.png" alt="картинка суши"></a>
-                    </div>
-                    <div class="about-info-more-link">
-                        <a href="#"><img src="images/sushi_black.png" alt="картинка суши"></a>
-                    </div>
-                    <div class="about-info-more-link">
-                        <a href="#"><img src="images/tuna_black.png" alt="картинка суши"></a>
-                    </div>
+                    <a class="about-info-more-link" href="#1">
+                        <img src="images/onigiri.png" alt="картинка суши">
+                    </a>
+                    <a class="about-info-more-link" href="#21231">
+                        <img src="images/sushi_black.png" alt="картинка суши">
+                    </a>
+                    <a class="about-info-more-link" href="#33231">
+                        <img src="images/tuna_black.png" alt="картинка суши">
+                    </a>
                 </div>
             </div>
             <div class="about-image">
@@ -195,10 +198,20 @@
         </span>
     </div>
 </footer>
+
 <script>
+
     document.getElementById('main-button').onclick = function () {
         document.getElementById('order').scrollIntoView({behavior: 'smooth'})
     }
+
+    for (let btn of document.getElementsByClassName('button button-order')) {
+        btn.onclick = function () {
+            alert('Товар добавлен в корзину!')
+        }
+    }
+
 </script>
+
 </body>
 </html>
